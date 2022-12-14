@@ -49,7 +49,14 @@ namespace C_Sharped
 
             //----------------------------------------------------------------------------
 
+            Car bmw = new Car();
+            bmw.Colour = "Red";
+            bmw.Manufacturer = "BMW";
+            bmw.GasLevel = 5;
 
+            bmw.Drive();
+            
+            
 
 
             //-------------Substring------------------------------------------------------
