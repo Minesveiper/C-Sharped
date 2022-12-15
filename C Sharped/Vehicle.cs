@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace C_Sharped
 {
-    internal class Vehicle
+    public class Vehicle
     {
+        public string colour;
+        public string manufacturer;
+        public string gasLevel;
 
         public Vehicle(string colour, string manufacturer, int gasLevel)
         {
-            //
+        
+
         }
         //public string Colour { get; set; }  //colour
         //public string Manufacturer { get; set; }    //manufacturer
@@ -26,8 +30,12 @@ namespace C_Sharped
         }
     }
 
-    internal class Car : Vehicle
+    public class Car : Vehicle
     {
+        public Car(string colour, string manufacturer, int gasLevel) : base(colour, manufacturer, gasLevel)
+        {
+        }
+
         public void OpenWindow()
         {
             Console.WriteLine("Car window is open,...\nAhh, fresh air!");
@@ -39,13 +47,20 @@ namespace C_Sharped
         }
     }
 
-    internal class Ecar : Vehicle 
+    public class Ecar : Vehicle
     {
         //Override Drive()
+        public Ecar(string colour, string manufacturer, int gasLevel) : base(colour, manufacturer, gasLevel)
+        {
+        }
     }
 
-    internal class Motorcycle : Vehicle
+    public class Motorcycle : Vehicle
     {
+        public Motorcycle(string colour, string manufacturer, int gasLevel) : base(colour, manufacturer, gasLevel)
+        {
+        }
+
         public void PutHelmetOn()
         {
             Console.WriteLine("Helmet suits well,...\nNice and safe!");
